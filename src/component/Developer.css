@@ -1,0 +1,61 @@
+.navbar{
+    height: 80px;
+    width: 100%;
+    background-color: blue;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3px;
+
+}
+.nav-links{
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-gap: 20px;
+    list-style: none;
+
+}
+
+.nav-icon{
+    display: none;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+
+@media screen and (max-width: 768px) {
+    .nav-links{
+        display: none;
+    }
+    .nav-icon{
+        display: block;   
+    }
+    .nav-links{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        text-align: center;
+        top: 80px;
+        left: -120%;
+        width: 100%;
+        background-color: blue;
+        color: white;
+        transition: 05s all;
+    }
+    .nav-links.active{
+        background-color: blue;
+        left: 0;
+    }
+    .nav-item{
+        padding: 10px 0;
+        border-top: 1px solid blue;
+        border-bottom: 1px solid blue;
+    }
+    .nav-icon{
+        display: flex;
+    }
+
+
+}
+

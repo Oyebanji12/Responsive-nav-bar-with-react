@@ -1,0 +1,61 @@
+.flex-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: black;
+    color: white;
+    width:100%;
+    height: 50px;
+    
+}
+
+.logo{
+    margin-right: auto;
+    font-size: 20px;
+    font-weight: bold;   
+    
+
+}
+
+.nav-menu{
+    display: flex; 
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    margin: 7px;
+}
+
+/* to hide the hambuger icon for desktop mode */
+.icon-button{
+    position: absolute;
+    display: none;
+}
+/* to show the hambuger icon for mobile mode */
+@media  screen and (max-width:768px) {
+    .icon-button{
+        display: block;
+        margin-right: -70%;
+    }
+    /* to prevent the horizontal menu from showing in mobile mode */
+    .nav-menu{
+        display: none;
+    }
+    /* to make the menu to show after clicking the hamburger button */
+    .nav-menu.expand {
+        display: block;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        height: auto;
+        background-color: black;
+        color: white;
+    }
+    
+}
